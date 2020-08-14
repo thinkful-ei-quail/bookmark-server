@@ -1,0 +1,3 @@
+{"message":"Tried to delete bookmark at id:97267069-045e-428d-a3a0-f4880ba3144e but id does not exist.","level":"error"}
+{"message":"Unauthorized request to path: /bookmarks/3b76aaca-f287-4da7-88fc-5956fa0b0ced","level":"error"}
+{"message":"Unauthorized request to path: /bookmarks/","level":"error"}

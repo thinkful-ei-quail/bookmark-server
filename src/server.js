@@ -1,22 +1,8 @@
-require('dotenv').config()
-const express = require('express')
-const morgan = require('morgan')
-const cors = require('cors')
-const helmet = require('helmet')
-
-const app = express()
-
-const morganOption = (process.env.NODE_ENV === 'production') ? 'tiny' : 'common';
-
-app.use(morgan(morganOption))
-app.use(helmet())
-app.use(cors())
-
-function main(request, response)
+const app = require('./app');
+const {PORT} = require('./config');
+function main()
 {
-    response.send("Hello, world!");
+    console.log(`Listening on port:${PORT}`)
 }
 
-app.get("/", main)
-
-module.exports = app
+app.listen(PORT,main)
