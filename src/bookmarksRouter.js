@@ -32,13 +32,13 @@ bookmarksRouter.route('/bookmarks/:id').get((request, response)=>{
 });
 
 bookmarksRouter.route('/bookmarks').post(authValidator,postValidator,(request, response)=>{
-    const {title,desc,url,rating} = request.body;
+    const {title,url,description,rating} = request.body;
     
     let bookmark = {
         id:uuid(),
         title:title,
-        desc:desc,
         url:url,
+       description:description,
         rating:rating
     }
     addBookmark(bookmark);
