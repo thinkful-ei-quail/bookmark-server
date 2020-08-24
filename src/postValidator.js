@@ -1,6 +1,6 @@
 module.exports = function(request,response,next)
 {
-    let {title, desc, url, rating} = request.body;
+    let {title, description, url, rating} = request.body;
     rating = Number(rating);
     if(!title)
     {
@@ -29,10 +29,10 @@ module.exports = function(request,response,next)
         
         return response.status(400).json({message:"Rating must be between 1 and 5"});
     }
-    if(!desc)
+    if(!description)
     {
         
-        return response.status(400).json({message:"Must have desc"});
+        return response.status(400).json({message:"Must have description"});
         
     }
     next();
